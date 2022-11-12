@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .ring{
+    position: absolute;
+    width: 1500px;
+    height: 1200px;
+    border: 100px solid transparent;
+    border-top: 100px solid transparent;
+    border-radius: 50%;
+    animation: animate 10s linear infinite;
+
+}
+
+@keyframes animate{
+    0%{
+
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.container .ring::before{
+    content: '';
+    position: absolute;
+    top: 120px;
+    right: 90px;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background: url(./img/keyf.png);
+    background-size: 300px;
+}
+.container .ring:nth-child(1){
+    position: absolute;
+    top: -66.66px;
+}
